@@ -1,0 +1,5 @@
+Parameters of the script:
+
+<path-to-script> <directory-name> <archive-name> <extensions list>
+
+Extensions should be divided by space.
