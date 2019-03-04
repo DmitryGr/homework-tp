@@ -1,0 +1,3 @@
+/home/dmitry/HW2/A/CMakeFiles/rebuild_cache.dir
+/home/dmitry/HW2/A/CMakeFiles/bot.dir
+/home/dmitry/HW2/A/CMakeFiles/edit_cache.dir
