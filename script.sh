@@ -3,8 +3,12 @@
 sudo apt-get install libssl-dev
 sudo apt-get install curl
 
+compiler=../tools/arm-bcm2708/arm-linux-gnueabihf/bin
 
-cmake "-DON_PI=1" "-DSYSROOT=../tools/arm-bcm2708/arm-bcm2708hardfp-linux-gnueabi/arm-bcm2708hardfp-linux-gnueabi/sysroot"
+PATH=$PATH:/$compiler
+
+
+cmake -DON_PI=ON -D SYSROOT=./tools/arm-bcm2708/arm-linux-gnueabihf/arm-linux-gnueabihf/sysroot .
 make
-make install
+sudo make install DESTDIR=../
 LD_LIBRARY_PATH=../usr/local/lib ./usr/local/bin/Facade
