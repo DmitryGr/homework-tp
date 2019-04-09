@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Bridge.dir/main.cpp.o CMakeFiles/Bridge.dir/wheels/SteeringWheel.cpp.o CMakeFiles/Bridge.dir/axles/Axle.cpp.o CMakeFiles/Bridge.dir/wheels/Gamepad.cpp.o CMakeFiles/Bridge.dir/axles/CarAxle.cpp.o CMakeFiles/Bridge.dir/wheels/PlaneWheel.cpp.o CMakeFiles/Bridge.dir/axles/PlaneAxle.cpp.o  -o /home/dmitry/TPF/bin-arm/Bridge 

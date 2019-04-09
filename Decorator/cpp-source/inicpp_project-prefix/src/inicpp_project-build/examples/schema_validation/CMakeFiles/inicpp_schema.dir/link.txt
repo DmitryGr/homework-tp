@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++14 -Wall -Wextra -Wdeprecated -Wconversion -Wold-style-cast -Weffc++ -Wformat  -rdynamic CMakeFiles/inicpp_schema.dir/main.cpp.o  -o inicpp_schema -Wl,-rpath,/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/inicpp_project-prefix/src/inicpp_project-build ../../libinicpp.so 

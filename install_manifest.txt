@@ -1,0 +1,5 @@
+/usr/local/lib/libserializers.so
+/usr/local/lib/libisaac_rooms.so
+/usr/local/lib/libisaac_factories.so
+/usr/local/lib/libburger_shop.so
+/usr/local/bin/Facade

@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/factories/BasementFactory.h
+RoomFactory.h
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/factories/RoomFactory.h
+
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/factories/CavesFactory.h
+RoomFactory.h
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/factories/RoomFactory.h
+
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/factories/RoomFactory.h
+memory
+-
+../rooms/NormalRoom.h
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/rooms/NormalRoom.h
+../rooms/HardRoom.h
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/rooms/HardRoom.h
+
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/main.cpp
+iostream
+-
+factories/RoomFactory.h
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/factories/RoomFactory.h
+factories/BasementFactory.h
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/factories/BasementFactory.h
+factories/CavesFactory.h
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/factories/CavesFactory.h
+
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/rooms/HardRoom.h
+Room.h
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/rooms/Room.h
+
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/rooms/NormalRoom.h
+Room.h
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/rooms/Room.h
+
+/home/dmitry/TPF/PatternsCollection/AbstractFactory/cpp-source/rooms/Room.h
+string
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Composite.dir/main.cpp.o CMakeFiles/Composite.dir/ration/DishComponent.cpp.o CMakeFiles/Composite.dir/ration/Dish.cpp.o CMakeFiles/Composite.dir/ration/Milk.cpp.o CMakeFiles/Composite.dir/ration/Breakfast.cpp.o  -o /home/dmitry/TPF/bin/Composite 

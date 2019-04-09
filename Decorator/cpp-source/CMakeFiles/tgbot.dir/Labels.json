@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/CMakeFiles/tgbot"
+		},
+		{
+			"file" : "/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/CMakeFiles/tgbot.rule"
+		},
+		{
+			"file" : "/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/CMakeFiles/tgbot-complete.rule"
+		},
+		{
+			"file" : "/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-install.rule"
+		},
+		{
+			"file" : "/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-mkdir.rule"
+		},
+		{
+			"file" : "/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-download.rule"
+		},
+		{
+			"file" : "/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-update.rule"
+		},
+		{
+			"file" : "/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-patch.rule"
+		},
+		{
+			"file" : "/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-configure.rule"
+		},
+		{
+			"file" : "/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"tgbot"
+		],
+		"name" : "tgbot"
+	}
+}

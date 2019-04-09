@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dmitry/TPF/PatternsCollection/Prototype/cpp-source/FerrariPrototype.cpp
+FerrariPrototype.h
+/home/dmitry/TPF/PatternsCollection/Prototype/cpp-source/FerrariPrototype.h
+
+/home/dmitry/TPF/PatternsCollection/Prototype/cpp-source/FerrariPrototype.h
+Prototype.h
+/home/dmitry/TPF/PatternsCollection/Prototype/cpp-source/Prototype.h
+string
+-
+
+/home/dmitry/TPF/PatternsCollection/Prototype/cpp-source/PirelliFerrari.cpp
+PirelliFerrari.h
+/home/dmitry/TPF/PatternsCollection/Prototype/cpp-source/PirelliFerrari.h
+
+/home/dmitry/TPF/PatternsCollection/Prototype/cpp-source/PirelliFerrari.h
+FerrariPrototype.h
+/home/dmitry/TPF/PatternsCollection/Prototype/cpp-source/FerrariPrototype.h
+
+/home/dmitry/TPF/PatternsCollection/Prototype/cpp-source/Prototype.cpp
+Prototype.h
+/home/dmitry/TPF/PatternsCollection/Prototype/cpp-source/Prototype.h
+
+/home/dmitry/TPF/PatternsCollection/Prototype/cpp-source/Prototype.h
+memory
+-
+
+/home/dmitry/TPF/PatternsCollection/Prototype/cpp-source/main.cpp
+iostream
+-
+vector
+-
+PirelliFerrari.h
+/home/dmitry/TPF/PatternsCollection/Prototype/cpp-source/PirelliFerrari.h
+

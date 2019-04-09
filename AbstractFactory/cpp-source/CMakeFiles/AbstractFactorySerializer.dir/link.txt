@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/AbstractFactorySerializer.dir/main_serializer.cpp.o  -o /home/dmitry/TPF/bin-arm/AbstractFactorySerializer -Wl,-rpath,/home/dmitry/TPF/lib-arm /home/dmitry/TPF/lib-arm/libisaac_factories.so /home/dmitry/TPF/lib-arm/libserializers.so /home/dmitry/TPF/lib-arm/libisaac_rooms.so 

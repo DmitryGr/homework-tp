@@ -1,0 +1,13 @@
+# Target labels
+ inicpp_project
+# Source files and their labels
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/CMakeFiles/inicpp_project
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/CMakeFiles/inicpp_project.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/CMakeFiles/inicpp_project-complete.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/inicpp_project-prefix/src/inicpp_project-stamp/inicpp_project-install.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/inicpp_project-prefix/src/inicpp_project-stamp/inicpp_project-mkdir.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/inicpp_project-prefix/src/inicpp_project-stamp/inicpp_project-download.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/inicpp_project-prefix/src/inicpp_project-stamp/inicpp_project-update.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/inicpp_project-prefix/src/inicpp_project-stamp/inicpp_project-patch.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/inicpp_project-prefix/src/inicpp_project-stamp/inicpp_project-configure.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/inicpp_project-prefix/src/inicpp_project-stamp/inicpp_project-build.rule

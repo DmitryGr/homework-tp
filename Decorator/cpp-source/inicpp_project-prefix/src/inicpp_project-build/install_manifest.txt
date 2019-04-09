@@ -1,0 +1,14 @@
+/home/dmitry/TPF/PatternsCollection/external/include/inicpp/dll.h
+/home/dmitry/TPF/PatternsCollection/external/include/inicpp/schema.h
+/home/dmitry/TPF/PatternsCollection/external/include/inicpp/inicpp.h
+/home/dmitry/TPF/PatternsCollection/external/include/inicpp/section.h
+/home/dmitry/TPF/PatternsCollection/external/include/inicpp/parser.h
+/home/dmitry/TPF/PatternsCollection/external/include/inicpp/string_utils.h
+/home/dmitry/TPF/PatternsCollection/external/include/inicpp/config.h
+/home/dmitry/TPF/PatternsCollection/external/include/inicpp/option_schema.h
+/home/dmitry/TPF/PatternsCollection/external/include/inicpp/section_schema.h
+/home/dmitry/TPF/PatternsCollection/external/include/inicpp/option.h
+/home/dmitry/TPF/PatternsCollection/external/include/inicpp/exception.h
+/home/dmitry/TPF/PatternsCollection/external/include/inicpp/types.h
+/home/dmitry/TPF/PatternsCollection/external/lib/libinicpp.so
+/home/dmitry/TPF/PatternsCollection/external/lib/libinicpp_static.a

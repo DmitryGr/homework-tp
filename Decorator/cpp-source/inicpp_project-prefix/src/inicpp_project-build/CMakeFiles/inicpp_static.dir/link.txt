@@ -1,0 +1,2 @@
+/usr/bin/ar qc libinicpp_static.a  CMakeFiles/inicpp_static.dir/src/config.cpp.o CMakeFiles/inicpp_static.dir/src/option.cpp.o CMakeFiles/inicpp_static.dir/src/option_schema.cpp.o CMakeFiles/inicpp_static.dir/src/parser.cpp.o CMakeFiles/inicpp_static.dir/src/schema.cpp.o CMakeFiles/inicpp_static.dir/src/section.cpp.o CMakeFiles/inicpp_static.dir/src/section_schema.cpp.o CMakeFiles/inicpp_static.dir/src/string_utils.cpp.o
+/usr/bin/ranlib libinicpp_static.a

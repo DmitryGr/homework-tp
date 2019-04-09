@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Adapter.dir/main.cpp.o CMakeFiles/Adapter.dir/TextStorage.cpp.o CMakeFiles/Adapter.dir/JsonStorage.cpp.o CMakeFiles/Adapter.dir/TextJsonAdapter.cpp.o  -o /home/dmitry/TPF/bin/Adapter 

@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Prototype.dir/main.cpp.o CMakeFiles/Prototype.dir/Prototype.cpp.o CMakeFiles/Prototype.dir/FerrariPrototype.cpp.o CMakeFiles/Prototype.dir/PirelliFerrari.cpp.o  -o /home/dmitry/TPF/bin-arm/Prototype 

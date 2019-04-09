@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/Builder.dir/Chef.cpp.o CMakeFiles/Builder.dir/builders/BurgerBuilder.cpp.o CMakeFiles/Builder.dir/builders/HamburgerBuilder.cpp.o CMakeFiles/Builder.dir/builders/base/Burger.cpp.o CMakeFiles/Builder.dir/builders/VegiburgerBuilder.cpp.o CMakeFiles/Builder.dir/main.cpp.o  -o /home/dmitry/TPF/bin-arm/Builder 

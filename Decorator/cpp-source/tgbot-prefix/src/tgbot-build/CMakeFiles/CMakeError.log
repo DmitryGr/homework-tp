@@ -1,0 +1,59 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_94453/fast"
+make[3]: вход в каталог «/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/CMakeTmp»
+/usr/bin/make -f CMakeFiles/cmTC_94453.dir/build.make CMakeFiles/cmTC_94453.dir/build
+make[4]: вход в каталог «/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_94453.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_94453.dir/CheckSymbolExists.c.o   -c /home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_94453
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94453.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_94453.dir/CheckSymbolExists.c.o  -o cmTC_94453 
+CMakeFiles/cmTC_94453.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_94453.dir/build.make:97: recipe for target 'cmTC_94453' failed
+make[4]: *** [cmTC_94453] Error 1
+make[4]: выход из каталога «/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/CMakeTmp»
+Makefile:126: recipe for target 'cmTC_94453/fast' failed
+make[3]: *** [cmTC_94453/fast] Error 2
+make[3]: выход из каталога «/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/CMakeTmp»
+
+File /home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e88c2/fast"
+make[3]: вход в каталог «/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/CMakeTmp»
+/usr/bin/make -f CMakeFiles/cmTC_e88c2.dir/build.make CMakeFiles/cmTC_e88c2.dir/build
+make[4]: вход в каталог «/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_e88c2.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e88c2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e88c2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e88c2.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e88c2.dir/CheckFunctionExists.c.o  -o cmTC_e88c2 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e88c2.dir/build.make:97: recipe for target 'cmTC_e88c2' failed
+make[4]: *** [cmTC_e88c2] Error 1
+make[4]: выход из каталога «/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/CMakeTmp»
+Makefile:126: recipe for target 'cmTC_e88c2/fast' failed
+make[3]: *** [cmTC_e88c2/fast] Error 2
+make[3]: выход из каталога «/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/CMakeTmp»
+
+

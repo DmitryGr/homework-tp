@@ -1,0 +1,1 @@
+cmd='/usr/bin/cmake;-DCMAKE_INSTALL_PREFIX=/home/dmitry/TPF/PatternsCollection/external;-DINCLUDE_INSTALL_DIR=/home/dmitry/TPF/PatternsCollection/external/include;-DLIB_INSTALL_DIR=/home/dmitry/TPF/PatternsCollection/external/lib;-GUnix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'

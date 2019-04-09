@@ -1,0 +1,15 @@
+# Hashes of file build rules.
+d853bb0d30bf97679f9903fcc1d3b5f9 Decorator/cpp-source/CMakeFiles/inicpp_project-complete
+5a1fe6169367d72efde5dff0e34ee9dd Decorator/cpp-source/CMakeFiles/tgbot-complete
+7c6839a467733e8a0b569bb21c034c83 Decorator/cpp-source/inicpp_project-prefix/src/inicpp_project-stamp/inicpp_project-build
+ebba370a249930a92ddba29a5ead81b5 Decorator/cpp-source/inicpp_project-prefix/src/inicpp_project-stamp/inicpp_project-configure
+18f7ed039b420a2be62eaab4d147b104 Decorator/cpp-source/inicpp_project-prefix/src/inicpp_project-stamp/inicpp_project-download
+5a2f2b94021b8da2cb62ee766d09cb0e Decorator/cpp-source/inicpp_project-prefix/src/inicpp_project-stamp/inicpp_project-install
+b934472b7c44fcb03f2682480bb69410 Decorator/cpp-source/inicpp_project-prefix/src/inicpp_project-stamp/inicpp_project-mkdir
+4ed64e9b1fcb90db1e9b612fc9bed239 Decorator/cpp-source/inicpp_project-prefix/src/inicpp_project-stamp/inicpp_project-patch
+777894bc121cf4acac47ae7204cb2687 Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-build
+cdd9d9deea9ef4a8a27c68b9651acea7 Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-configure
+de749725764d59427d8bbbba13d45da7 Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-download
+d6d6108abe27f01e363c72acfbe2ca77 Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-install
+6d8e16b6cb7d98fdad779857c60b6a8b Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-mkdir
+60ab615904f53dd9dff5c946ee00bb43 Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-patch

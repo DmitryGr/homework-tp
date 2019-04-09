@@ -1,0 +1,13 @@
+# Target labels
+ tgbot
+# Source files and their labels
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/CMakeFiles/tgbot
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/CMakeFiles/tgbot.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/CMakeFiles/tgbot-complete.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-install.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-mkdir.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-download.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-update.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-patch.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-configure.rule
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-stamp/tgbot-build.rule

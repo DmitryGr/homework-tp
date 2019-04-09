@@ -1,0 +1,7 @@
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/install/strip.dir
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/edit_cache.dir
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/TgBot.dir
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/rebuild_cache.dir
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/list_install_components.dir
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/install/local.dir
+/home/dmitry/TPF/PatternsCollection/Decorator/cpp-source/tgbot-prefix/src/tgbot-build/CMakeFiles/install.dir
