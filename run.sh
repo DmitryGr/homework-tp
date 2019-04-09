@@ -18,3 +18,6 @@ password=dadadimas''' > config.ini
 cmake .
 make
 sudo make install
+
+cd ../bin
+./Decorator
