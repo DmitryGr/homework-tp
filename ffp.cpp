@@ -6,10 +6,10 @@ FixedFirePoint::FixedFirePoint(){
 }
 
 void FixedFirePoint::go(){
-    assert(0);
+    assert(1);
 }
-void FixedFirePoint::shoot(Visitor *v){
-    v->shootFfp(this);
+void FixedFirePoint::shoot(Visitor *v, Observer *obs){
+    v->shootFfp(this, obs);
 }
 FixedFirePoint* FixedFirePoint::clone() const{
     return new FixedFirePoint(*this);

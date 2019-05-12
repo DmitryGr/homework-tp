@@ -7,6 +7,6 @@ class FixedFirePoint: public Unit{
         int ticks_to_next_shoot;
         FixedFirePoint();
         void go();
-        void shoot(Visitor *v);
+        void shoot(Visitor *v, Observer *obs);
         FixedFirePoint* clone() const;
 };

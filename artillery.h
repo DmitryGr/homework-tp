@@ -7,7 +7,7 @@ class Artillery: public Unit{
         double square;
         int ticks_to_next_shoot;
         Artillery();
-        void shoot(Visitor *v);
+        void shoot(Visitor *v, Observer *obs);
         void go();
         Artillery* clone() const;
 };

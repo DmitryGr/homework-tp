@@ -1,143 +1,27 @@
 const int FIELD = 150, SOVIET_SOLDIERS=20, GERMAN_SOLDIERS=16, SOVIET_TANKS=8, GERMAN_TANKS=12, ARTILLERY=4, ZONE=10;
-const int LIVES_DEFAULT = 50, GUN_DEFAULT = 5, TANK_DEFAULT = 10, ARTILLERY_DEFAULT=20;
+const int LIVES_DEFAULT = 50, GUN_DEFAULT = 5, TANK_DEFAULT = 10, ARTILLERY_DEFAULT=20, TANK_SPEED=2;
 const double GUN_DEVIAFION_DEFAULT = 0.03, ARTILLERY_DISPERSION_FUNCTION = 0.03, DEFAULT_SQUARE = 1;
 const int TANK_DURATION = 2, ARTILLERY_DURATION = 10;
 const int GROUPS_IN_ARMY = 4;
 const int UP=0, LEFT=1, RIGHT=2, DOWN=3;
-const int SOVIET=0, GERMANY=1;
+const int SOVIET=1, GERMANY=0;
 const int INF = 1e9;
 using namespace std;
-
 #include <bits/stdc++.h>
+std::vector<pair<int, int> > DIRECTIONS = {{0,1}, {1,0}, {-1,0}, {0,-1}};
 #include "visitor.h"
 #include "unit.h"
+#include "observer.cpp"
 #include "infantry.h"
 #include "tank.h"
 #include "artillery.h"
 #include "ffp.h"
-#include "visitor.cpp"
 #include "infantry.cpp"
 #include "tank.cpp"
 #include "ffp.cpp"
 #include "artillery.cpp"
-class Army{
-    friend bool operator ==(const Army& a, const Army& b);
-    private:
-        vector<Infantry*> infantry;
-        vector<Tank*> tanks;
-        vector<Artillery*> artillery;
-        vector<FixedFirePoint*> ffp;
-    public:
-        //vector<Artillery*> artillery;
-        void action(){
-
-        }
-        vector<Infantry*> get_infantry(){
-            return infantry;
-        }
-        vector<Tank*> get_tanks(){
-            return tanks;
-        }
-        vector<Artillery*> get_artillery(){
-            return artillery;
-        }
-        vector<FixedFirePoint*> get_ffp(){
-            return ffp;
-        }
-        void add_soldiers(vector<Infantry*> added){
-            for (auto soldier: added){
-                infantry.push_back(soldier);
-            }
-        }
-        void add_tank(vector<Tank*> added){
-            for (auto tank: added){
-                tanks.push_back(tank);
-            }
-        }
-        void add_artillery(vector<Artillery*> added){
-            for (auto artillery_unit: added){
-                artillery.push_back(artillery_unit);
-            }
-        }
-        ~Army(){
-            infantry.clear();
-            tanks.clear();
-            artillery.clear();
-            ffp.clear();
-        }
-};
-
-class Observer{
-    public:
-        vector<Unit*> soviet_subscribers;
-        vector<Unit*> german_subscribers;
-        vector<Unit*> closest_to_soviet;
-        vector<Unit*> closest_to_german;
-        void add_unit(Unit* unit, bool if_soviet){
-            if (if_soviet == SOVIET){
-                soviet_subscribers.push_back(unit);
-                closest_to_soviet.push_back(nullptr);
-            }
-            else{
-                german_subscribers.push_back(unit);
-                closest_to_german.push_back(nullptr);
-            }
-        }
-        void remove_unit(Unit* unit, bool if_soviet){
-            if (if_soviet == SOVIET){
-                remove_from_vector(soviet_subscribers, closest_to_german, unit);
-            }
-            else remove_from_vector(german_subscribers, closest_to_soviet, unit);
-        }
-        void recalc_distances(){
-            for (int i=0; i < soviet_subscribers.size(); i++){
-                int shortest_dist=INF;
-                Unit* target = nullptr;
-                for (int j=0; j < german_subscribers.size(); j++){
-                    int distance = get_dist(soviet_subscribers[i], german_subscribers[j]);
-                    if (distance < shortest_dist){
-                        shortest_dist = distance;
-                        target = german_subscribers[j];
-                    }
-                }
-                closest_to_soviet[i] = target;
-            }
-            for (int i=0; i < german_subscribers.size(); i++){
-                int shortest_dist=INF;
-                Unit* target = nullptr;
-                for (int j=0; j < soviet_subscribers.size(); j++){
-                    int distance = get_dist(soviet_subscribers[j], german_subscribers[i]);
-                    if (distance < shortest_dist){
-                        shortest_dist = distance;
-                        target = soviet_subscribers[j];
-                    }
-                }
-                closest_to_german[i] = target;
-            }
-        }
-        int get_dist(Unit* a, Unit* b){
-            return abs(a->x-b->x) + abs(a->y-b->y);
-        }
-        ~Observer(){
-            soviet_subscribers.clear();
-            german_subscribers.clear();
-            closest_to_german.clear();
-            closest_to_soviet.clear();
-        }
-    private:
-        void remove_from_vector(vector<Unit*> &line, vector<Unit*> closest, Unit* unit){
-            vector<Unit*> new_vector, new_closest;
-            for (int i=0; i < line.size(); i++){
-                if (line[i] != unit){
-                    new_vector.push_back(line[i]);
-                    new_closest.push_back(closest[i]);
-                }
-            }
-            line = new_vector, closest = new_closest;
-            new_vector.clear(), new_closest.clear();
-        }
-};
-
+#include "army.cpp"
+#include "visitor.cpp"
 bool operator !=(const Infantry& a, const Infantry& b){
     if (a.lives != b.lives || a.gun_deviation_percent != b.gun_deviation_percent || a.gun_power != b.gun_power) return true;
     return false;
@@ -255,118 +139,7 @@ class TankAdapter{
         }
 };
 
-
-class Subdivision{
-    private:
-        vector<Subdivision*> subordinated_subdivisions;
-        vector<Unit*> subordinated_units;
-        vector<Tank*> subordinated_tanks_only;
-
-    public:
-        Subdivision(Army* army){
-            vector<Infantry*> infantry = army->get_infantry();
-            vector<Tank*> tanks = army->get_tanks();
-            vector<Artillery*> artillery = army->get_artillery();
-            vector<FixedFirePoint*> ffp = army->get_ffp();
-            for (int i=0; i < infantry.size(); i++) subordinated_units.push_back(infantry[i]);
-            for (int i=0; i < artillery.size(); i++) subordinated_units.push_back(artillery[i]);
-            for (int i=0; i < ffp.size(); i++) subordinated_units.push_back(ffp[i]);
-            for (int i=0; i < tanks.size(); i++){
-                subordinated_units.push_back(tanks[i]);
-                subordinated_tanks_only.push_back(tanks[i]);
-            }
-        }
-        Subdivision(){
-
-        }
-        void add_unit(Unit* unit){
-            subordinated_units.push_back(unit);
-        }
-
-        void add_tank(Tank* unit){
-            subordinated_units.push_back(unit);
-            subordinated_tanks_only.push_back(unit);
-        }
-
-        void add_subdivision(Subdivision* subdivision){
-            subordinated_subdivisions.push_back(subdivision);
-        }
-
-        void remove_unit(Unit* unit){
-            vector<Unit*> new_units_list;
-            for (auto element: subordinated_units){
-                if (element != unit) new_units_list.push_back(element);
-            }
-            subordinated_units = new_units_list;
-        }
-
-        void remove_tank(Tank* unit){
-            remove_unit(unit);
-            vector<Tank*> new_tanks_list;
-            for (auto element: subordinated_tanks_only){
-                if (element != unit) new_tanks_list.push_back(element);
-            }
-            subordinated_tanks_only = new_tanks_list;
-        }
-
-        void remove_subdivision(Subdivision* subdivision){
-            vector<Subdivision*> new_subd_list;
-            for (auto element: subordinated_subdivisions){
-                if (element != subdivision) new_subd_list.push_back(element);
-            }
-            subordinated_subdivisions = new_subd_list;
-        }
-
-        void shoot_all(){
-            for (auto subd: subordinated_subdivisions){
-                subd->shoot_all();
-            }
-            for (auto unit: subordinated_units){
-                Visitor* v = new Visitor();
-                unit->shoot(v);
-            }
-        }
-
-        void go_all(){
-            for (auto subd: subordinated_subdivisions){
-                subd->go_all();
-            }
-            for (auto unit: subordinated_units){
-                unit->go();
-            }
-        }
-
-        void transform_all_tanks(){
-            for (auto subd: subordinated_subdivisions){
-                subd->transform_all_tanks();
-            }
-            vector<Unit*> new_units_list;
-            vector<Tank*> new_tanks_list;
-            for (auto unit: subordinated_units){
-                if (unit->is_tank){
-                    continue;
-                }
-                else new_units_list.push_back(unit);
-            }
-            for (auto tank: subordinated_tanks_only){
-                if (tank->lives > 0){
-                    new_tanks_list.push_back(tank);
-                    new_units_list.push_back(tank);
-                }
-                else{
-                    TankAdapter* adapter = new TankAdapter(tank);
-                    new_units_list.push_back(adapter->transform_to_ffp());
-                }
-            }
-            subordinated_units = new_units_list;
-            subordinated_tanks_only = new_tanks_list;
-        }
-        ~Subdivision(){
-            subordinated_subdivisions.clear();
-            subordinated_tanks_only.clear();
-            subordinated_units.clear();
-        }
-};
+#include "subdivision.cpp"
 
 class Game{
     public:
@@ -388,6 +161,33 @@ int run(){
     cout << "Armies are created" << endl;
     Subdivision* whole_soviet_army = new Subdivision(soviet_army);
     Subdivision* whole_german_army = new Subdivision(german_army);
+    whole_soviet_army->divide(), whole_german_army->divide();
+    cout << "Armies are divided and ready to battle" << endl;
+    Observer* global_observer = new Observer();
+    vector<Unit*> all_soviet = whole_soviet_army->get_all_units(), all_german = whole_german_army->get_all_units();
+    for (auto unit: all_soviet){
+        global_observer->add_unit(unit, SOVIET);
+    }
+    for (auto unit: all_german){
+        global_observer->add_unit(unit, GERMANY);
+    }
+    while (true){
+        string mv;
+        cin >> mv;
+        if (mv == "shoot") whole_soviet_army->shoot_all(global_observer);
+        else if (mv == "go") whole_soviet_army->go_all();
+        int R = rand()%2;
+        if (R==0) whole_german_army->shoot_all(global_observer);
+        else whole_german_army->go_all();
+        if (whole_soviet_army->if_battle_lost()){
+            cout << "You Lose!";
+            return 0;
+        }
+        if (whole_german_army->if_battle_lost()){
+            cout << "You Win!";
+            return 0;
+        }
+    }
     return 0;
 }
 

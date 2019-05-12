@@ -8,11 +8,11 @@ Artillery::Artillery(){
     dispersion = ARTILLERY_DISPERSION_FUNCTION;
     ticks_to_next_shoot=0;
 }
-void Artillery::shoot(Visitor *v){
-    v->shootArt(this);
+void Artillery::shoot(Visitor *v, Observer *obs){
+    v->shootArt(this, obs);
 }
 void Artillery::go(){
-    assert(0);
+    assert(1);
 }
 Artillery* Artillery::clone() const{
     return new Artillery(*this);

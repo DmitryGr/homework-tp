@@ -8,6 +8,6 @@ class Tank : public Unit{
         int ticks_to_next_shoot;
         Tank();
         void go();
-        void shoot(Visitor *v);
+        void shoot(Visitor *v, Observer *obs);
         Tank* clone() const;
 };

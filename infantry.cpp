@@ -8,11 +8,17 @@ Infantry::Infantry(){
 }
 
 void Infantry::go(){
-
+    int R = rand() % DIRECTIONS.size();
+    pair<int, int> mv = DIRECTIONS[R];
+    int new_x = x+mv.first, new_y = y+mv.second;
+    if (!out_of_field(new_x, new_y)){
+        x = new_x;
+        y = new_y;
+    }
 }
 
-void Infantry::shoot(Visitor *v){
-    v->shootSoldier(this);
+void Infantry::shoot(Visitor *v, Observer *obs){
+    v->shootSoldier(this, obs);
 }
 
 Infantry* Infantry::clone() const{

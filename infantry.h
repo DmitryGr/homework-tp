@@ -6,7 +6,7 @@ class Infantry : public Unit{
         double gun_deviation_percent;
         Infantry();
         void go();
-        void shoot(Visitor *v);
+        void shoot(Visitor *v, Observer *obs);
         Infantry* clone() const;
 };
 
